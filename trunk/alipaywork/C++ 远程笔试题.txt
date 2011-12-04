@@ -1,0 +1,24 @@
+本笔试题，可以上网、查书、上机获得帮助，但请不要请求他人帮助
+笔试时间为2小时
+
+
+实现一个Linux程序
+1. 这个程序将创建2个线程， 线程1执行客户端， 线程2执行服务器端，而主线程则等待线程1和线程2退出后，才能退出
+2. 线程1， 创建一个类CClient，并在这个CClient中运行
+	client 创建socket
+	等待server线程准备好
+	connect server 线程
+	发送"hello world "字符串到server
+	接受 server response，并打印该response
+	close socket
+	退出
+3. 线程2，创建一个类CServer， 并在这个CServer中运行
+	创建socket
+	listening
+	设置server 线程准备好
+	accept client连接
+	接受client的request， 并打印该request 内容
+	返回client response，response内容为"good boy"
+	close socket
+	退出
+4. 实现一个Makefile（附加题）该Makefile 可以用来编译该程序
