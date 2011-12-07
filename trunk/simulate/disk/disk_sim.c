@@ -14,7 +14,7 @@
 void do_read(int fd, int max, int count, int times) 
 {
     srand((unsigned)time(NULL));
-    char *buf = (char*)memalign((size_t)BLOCK_SIZE, (size_t)BLOCK_SIZE);
+    char *buf = (char*)memalign((size_t)BLOCK_SIZE, (size_t)BLOCK_SIZE * count);
     if(NULL == buf) {
         printf("memalign error\n");
         return;
