@@ -1,0 +1,9 @@
+message index_msg_t {
+    required int32 magic = 1;
+    required int32 flag = 2;
+    required int64 key = 3;
+    required uint64 offset = 4;
+    required uint64 size = 5;
+}
+
+
