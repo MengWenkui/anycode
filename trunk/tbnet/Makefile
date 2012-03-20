@@ -12,10 +12,10 @@ echoserver: echo_server.o
 echoclient: echo_client.o
 	$(CC) -o $@ $^ $(LIBS)
 
-echo_server.o: echo_server.cpp echo_packet.h echo_factory.h
+echo_server.o: echo_server.cpp
 	$(CC) -c $^ $(CFLAGS)
 
-echo_client.o: echo_client.cpp echo_packet.h echo_factory.h
+echo_client.o: echo_client.cpp
 	$(CC) -c $^ $(CFLAGS)
 
 clean:

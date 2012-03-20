@@ -30,8 +30,7 @@ class EchoServerAdapter: public IServerAdapter
       resp->setChannelId(packet->getChannelId());
 
       connection->postPacket(resp);
-      // resp->free();
-      // packet->free();
+      packet->free();
       return IPacketHandler::FREE_CHANNEL;
     }
 };

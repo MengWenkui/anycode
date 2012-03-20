@@ -52,7 +52,6 @@ class EchoClient
 
       transport_.wait();
       delete conn;
-      delete request;
     }
   private:
     Transport transport_;
