@@ -1,0 +1,9 @@
+class OpenFileMessage BasePacket
+var uint32_t block_id
+var int32_t flag
+end
+
+class BatchOpenFileMessage BasePacket
+var VUINT32 block_ids
+var int32_t flag
+end
